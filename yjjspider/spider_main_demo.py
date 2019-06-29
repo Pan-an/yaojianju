@@ -82,7 +82,6 @@ class SpiderMain(object):
         rsqlistHtml = etree.HTML(rsqlist.text)
         print(rsqlist.cookies)
         lists = rsqlistHtml.xpath('//a[contains(@href,"javascript:commitForECMA")]')
-        self.meta = rsqlistHtml.xpath('//*[@id="9DhefwqGPrzGxEp9hPaoag"]/@content')[0]
         for list in lists:
             name = list.xpath('./text()')[0]
             url = list.xpath('./@href')[0]
