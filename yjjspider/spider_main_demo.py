@@ -59,7 +59,7 @@ class SpiderMain(object):
         }
 
     def getCookie(self):
-        rsq =requests.get(self.url,headers = self.headers,timeout = 1)
+        rsq =requests.get(self.url,headers = self.headers)
         rsq.close()
         print(rsq.cookies)
         #第一次请求得到假的f82s,f82t,和metacontent
